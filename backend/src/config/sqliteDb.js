@@ -316,6 +316,9 @@ const initializeSqliteDb = () => {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       order_id INTEGER NOT NULL REFERENCES orders(id),
       product_variant_id INTEGER REFERENCES product_variants(id),
+      product_id INTEGER,
+      product_name TEXT,
+      variant_name TEXT,
       quantity INTEGER NOT NULL,
       unit_price NUMERIC(10,2) NOT NULL,
       subtotal NUMERIC(10,2) NOT NULL
@@ -572,6 +575,11 @@ const ensureMigrationsAndSeeds = () => {
   safeAddColumn('payments', 'rejection_reason TEXT');
   safeAddColumn('payments', 'verified_by INTEGER');
   safeAddColumn('payments', 'verified_at DATETIME');
+
+  // Ensure these columns exist before backfilling
+  safeAddColumn('order_items', 'product_id INTEGER');
+  safeAddColumn('order_items', 'product_name TEXT');
+  safeAddColumn('order_items', 'variant_name TEXT');
 
   // Backfill order_items product_name, variant_name, and product_id from existing products & variants
   try {
