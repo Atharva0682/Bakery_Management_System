@@ -527,6 +527,15 @@ const ensureMigrationsAndSeeds = () => {
   safeAddColumn('customer_feedback', 'rating_overall INTEGER');
   safeAddColumn('customer_feedback', 'packaging_rating INTEGER DEFAULT 5');
   safeAddColumn('customer_feedback', 'is_complaint INTEGER DEFAULT 0');
+  // Create the missing table before trying to add columns to it
+  try {
+    db.exec(`CREATE TABLE IF NOT EXISTS batch_lot_consumption (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        quantity_consumed NUMERIC(10,3)
+    );`);
+  } catch (e) {
+    console.error("Error creating batch_lot_consumption table:", e);
+  }
   safeAddColumn('batch_lot_consumption', 'quantity_consumed NUMERIC(10,3)');
 
   // Timely auto-deletion of payment screenshots older than 30 days
