@@ -1,0 +1,88 @@
+{
+  "id": "/owner/?source=pwa",
+  "name": "Crumb & Co. — Owner Command Console",
+  "short_name": "Bakery Owner",
+  "description": "Real-time bakery operations, order desk, live inventory watch, and financial analytics.",
+  "start_url": "/owner?source=pwa",
+  "scope": "/owner",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FAF6F0",
+  "theme_color": "#FAF6F0",
+  "categories": ["business", "finance", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/crumbandco.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Owner Dashboard",
+      "short_name": "Dashboard",
+      "description": "Daily overview, sales, and open batches",
+      "url": "/owner",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Order Desk",
+      "short_name": "Orders",
+      "description": "Accept orders, verify payments & manage dispatch",
+      "url": "/owner/orders",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Inventory & Stock",
+      "short_name": "Stock",
+      "description": "Pantry stock, reorder thresholds & supplier receipts",
+      "url": "/owner/stock",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

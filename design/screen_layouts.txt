@@ -1,0 +1,236 @@
+
+==================== customer-home.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 168 | Authentic & Handcrafted
+ 204 | Freshly Baked, Delivered
+ 276 | with Love
+ 480 | Order Now View Menu
+ 660 | Fresh Daily Quick Delivery Custom Orders QR Order
+ 840 | Explore Our Categories
+1116 | Cakes Pastries Breads Cookies Savory Beverages
+1224 | Why Customers Love Crumb&Co.
+1356 | Fresh Daily Quick Delivery Custom Orders QR Order
+1512 | Cake of the Day
+1548 | Order a Freshly Baked Cake for Any Occasion
+1668 | Order a Cake View Cakes
+1800 | Our Signature Best Sellers
+1860 | View Full Menu
+2124 | 4.8 4.9 4.7 4.8
+2160 | Butter Croissant Chocolate Truffle Cake Masala Puff Mawa Cake
+2184 | ₹180 ₹850 ₹45 ₹120
+2232 | Add to Cart Add to Cart Add to Cart Add to Cart
+2400 | Crumb&Co. Explore Contact Us
+
+==================== customer-menu.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 144 | Our Artisanal Menu
+ 156 | Sr r rot Sort by: Popular 12 items
+ 240 | All Cakes Pastries Breads Cookies Savory Beverages
+ 636 | 4.9
+ 660 | 4.8 4.7 Chocolate Truffle Cake
+ 684 | Butter Croissant Masala Puff
+ 696 | r oot brto
+ 720 | t bttry y tyr r tr ry yr t trto y otto
+ 756 | ₹180 Add ₹850 Add ₹45 Add
+1080 | 4.6 4.8 4.9
+1104 | Eggless Vanilla Cake Nankhatai Chicken Puff
+1140 | Soy t o t ort b Sortbr oo t ro rot y o rt o t ory
+1164 | r to
+1200 | ₹650 Add ₹150 Add ₹75 Add
+1512 | 4.7 4.6
+1536 | 4.5
+1548 | Black Forest Cake Veg Puff
+1572 | Khari Biscuit
+1584 | t t rr r r r yr try o t
+1596 | rto ry ty try bt or t t oot rrot
+1632 | ₹120 ₹750 ₹50
+1644 | Add Add Add
+1812 | Crumb&Co. Explore Contact Us
+1848 | r
+1872 | Srt r rt bry
+1884 | o orrrbo
+1896 | r r ry bt trt ro
+1908 | or trto y o to yor o
+1920 | rr r t b
+2016 | rbo rt rr
+
+==================== customer-product-details.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 144 | Freshly Baked 100% Eggless Option Available
+ 168 | Chocolate Truffle Cake
+ 228 | 4.9
+ 264 | ₹850
+ 324 | Select Weight / Size
+ 372 | 500g 1kg 2kg
+ 456 | Make it 100% Eggless
+ 504 | Special Instructions (Name on Cake, Eggless note)
+ 612 | Cake Note
+ 744 | 1 Add to Cart • ₹850
+ 804 | Delivering to you in 30-45 mins
+ 936 | Description Ingredients Reviews
+1008 | Sink your teeth into layers of intense dark chocolate sponge filled with premium dark chocolate ganache, glazed to absolute glossy perfection. Prepared with imported premium
+1032 | cocoa and fine quality deck-oven baking techniques that keep it delightfully moist. Perfect for anniversaries, birthdays, or treating your sweet tooth.
+1092 | You May Also Like
+1344 | Pineapple Pastry Chocolate Truffle Cake Butter Croissant Mawa Cake
+1380 | ₹120 4.7 ₹850 4.9 ₹180 4.8 ₹120 4.8
+1536 | Crumb&Co. Explore Contact Us
+
+==================== customer-cart.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 144 | Your Shopping Cart (3 Items) Have a Coupon/Promo Code? Save ₹337.50
+ 192 | Apply
+ 216 | Chocolate Truffle Cake
+ 228 | 1 ₹850
+ 288 | Bill Summary
+ 336 | Butter Croissant ₹1,345
+ 348 | 2 ₹360
+ 360 | ₹40
+ 396 | ₹67
+ 456 | Masala Puff -₹337.50
+ 468 | 3 ₹135
+ 516 | Grand Total ₹1,452
+ 588 | Proceed to Checkout
+ 612 | Your Usual Order (Quick Add)
+ 672 | Morning Pair Save 10%
+ 708 | Nankhatai Pack
+ 720 | Add
+ 732 | ₹150
+ 756 | Khari Biscuit Pack
+ 768 | Add
+ 780 | ₹120
+ 888 | Frequently Bought Together
+ 948 | Cold Brew Milk Coffee Mawa Cake Slice
+ 960 | Add Add
+ 972 | ₹110 ₹120
+1164 | Crumb&Co. Explore Contact Us
+
+==================== customer-checkout.pdf ====================
+  24 | Ch C eck C ou r t u P m ro b g & re C ss o. Home Menu Orders Cart Profile 3 AN
+  72 | 1 Delivery 2 Address 3 Schedule 4 Payment
+ 132 | Choose Delivery Method Order Summary
+ 180 | Chocolate Trufe Cae (500) ₹850 Delivery (30-45 Mins) Self Pickup (No fee)
+ 204 | Butter Croissant 2 ₹360
+ 240 | Masala uff ₹135
+ 288 | Select Delivery Address + Add New
+ 300 | ₹1,452 To Pay
+ 348 | Home (Default)
+ 360 | Place Order • ₹1,452
+ 372 | Flat 402, Sea Breeze Apartments, Carter Road, Bandra West, Mumbai - 400050
+ 480 | Select Delivery Time
+ 528 | Now (30-45 mins) Schedule for Later (Today/Tomorrow)
+ 636 | Select Payment Method
+ 684 | UPI & QR Credit/Debit Card Cash on Delivery
+ 780 | Scan QR Code to Pay instantly
+ 816 | Scan this Bhim R usin ooleay, honee, aytm or any banin app Scan is secure and powered by CrumbCo
+ 840 | UPI ID: crumbandco@hdfcbank
+1044 | Crumb&Co. Explore Contact Us
+1080 | ur Menu 5 420
+1104 | Smart, warm, and handcrafted ndian baery
+1116 | ccasion Caes ordercrumbandcoin eperience Freshness in eery sinle bite, straiht from
+1140 | our traditional clay and dec oens to your home
+1152 | Bul rders Bandra West, Mumbai
+1248 | 2025 CrumbCo All rihts resered
+
+==================== customer-order-tracking.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 144 | Order #CC-94821
+ 156 | In Production
+ 252 | 25 - 35 Minutes (5:05 PM)
+ 348 | Order Journey
+ 408 | Order Placed
+ 444 | Your Delivery Hero
+ 480 | Accepted Ramesh Kumar
+ 492 | RK
+ 552 | In Production Call Ramesh Need Help?
+ 636 | Quality Check
+ 708 | Packaged
+ 780 | Out for Delivery
+ 996 | Crumb&Co. Explore Contact Us
+
+==================== customer-my-orders.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 120 | Order Again
+ 216 | Butter Croissant Chocolate Truffle Cake Masala Puff
+ 228 | Reorder Reorder Reorder
+ 240 | ₹180 4.8 ₹850 4.9 ₹45 4.7
+ 336 | My Orders History
+ 348 | All Orders Active Past Orders
+ 444 | Order #CC-9874 Today, 02:45 PM In Production ₹1,030
+ 516 | Chocolate Truffle Cake (500g)
+ 540 | Qty: 1 × ₹850
+ 588 | Masala Puff
+ 612 | Qty: 4 × ₹180
+ 684 | Repeat Order View Details Need Help with Order?
+ 792 | Order #CC-9510 October 12, 2025 Delivered ₹540
+ 864 | Butter Croissant
+ 888 | Qty: 3 × ₹540
+ 972 | Repeat Order View Details Need Help with Order?
+1068 | Order #CC-9041 September 28, 2025 ₹1,210
+1080 | Delivered
+1140 | Mawa Cake
+1164 | Qty: 2 × ₹240
+1212 | Chocolate Truffle Cake (500g)
+1236 | Qty: 1 × ₹850
+1284 | Khari Biscuit Pack
+1308 | Qty: 1 × ₹120
+1392 | Repeat Order View Details Need Help with Order?
+1488 | Order #CC-8822 ₹180
+1500 | September 15, 2025 Cancelled
+1560 | Butter Croissant
+1584 | Qty: 1 × ₹180
+1668 | Repeat Order View Details Need Help with Order?
+1860 | Crumb&Co. Explore Contact Us
+1908 | Or Me 1 8 5 42 10
+1920 | Smart, a rm, ad ad cra ted da ba ery
+1932 | Occao a e ordercrmb ad co
+1944 | eperece ree eer y e bte , tra t rom
+1956 | o r trad t oa c ay ad d ec o e to yo r o me
+1968 | Order ad ra et , M mba
+2064 | 2025 rmb o rt reere d
+
+==================== customer-feedback.pdf ====================
+  24 | C Crumb&Co. Home Menu Orders Cart Profile 3 AN
+ 120 | My Past Reviews
+ 168 | Share Your Experience Reviews you have shared for previous deliveries
+ 216 | Your valuable feedback helps us perfect our master recipes daily.
+ 228 | Order #CC-9510 October 12, 2025
+ 252 | 5
+ 288 | Hands down the flakiest Butter Croissants in Bandra! Arrived warm. Reviewing Order #CC-9874
+ 312 | Chocolate Truffle Cake (500g), Masala Puff x4 • Deliv. Today
+ 372 | Order #CC-9041 September 28, 2025 Rate your delivery item across criteria:
+ 396 | 4
+ 420 | Overall Experience
+ 432 | 5 The Mawa Cake was outstandingly authentic. Truffle was a bit
+ 444 | How was your overall ordering journey?
+ 456 | sweet but super moist.
+ 492 | Taste & Flavors
+ 504 | 5
+ 516 | Indian spices blend and richness
+ 564 | Freshness
+ 576 | 5
+ 588 | Softness and warmth of baked goodness
+ 636 | Delivery Hand-off
+ 648 | 5
+ 660 | Timeliness and safety standards
+ 744 | Was everything baked as expected?
+ 816 | Your Review Comment
+ 864 | Tell us what you loved! (e.g. The cardamom flavor in the Truffle was beautifully balanced, arrived completely
+ 876 | hot and fresh! )
+ 996 | Quick Feedback Tags
+1032 | Fresh Warm Authentic On Time Moist Balanced
+1116 | Crumb Points Reward +50 Points
+1152 | Complete this review to earn 50 Crumb Points. Redeem them for free treats, early access, and special bakery
+1176 | perks on your next order.
+1200 | Current Balance Next Reward
+1224 | 1,240 pts 260 pts away
+1296 | Upload Photos (Optional)
+1392 | Click to upload your bakery snaps
+1416 | PNG or JPG up to 5MB
+1500 | Submit Feedback & Earn 50 Points
+1728 | Crumb&Co. Explore Contact Us
+1764 | ur Menu 5 0
+1776 | mart, warm, and handcrafted Indian bakery
+1800 | ccasion Cakes ordercrumbandco.in experience. reshness in every single bite, straight from
+1824 | our traditional clay and deck ovens to your home.
+1836 | Bulk rders Bandra est, Mumbai
+1932 | 05 CrumbCo. All rights reserved. SS ic No. 12 45 8 012 4

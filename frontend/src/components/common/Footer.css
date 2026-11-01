@@ -1,0 +1,140 @@
+/* Site Footer Styling — Crumb&Co. */
+.site-footer {
+  margin-top: auto;
+  background-color: #261B15; /* Rich dark roasted coffee bean tone from Figma */
+  color: #DCCEC1;
+  padding-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.brand-col {
+  max-width: 420px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.logo-badge-sm {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B5A2B, #C86D43);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-brand-name {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.footer-desc {
+  color: #A8988C;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #A8988C;
+  font-size: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #A8988C;
+  font-size: 14px;
+}
+
+.contact-icon {
+  color: var(--color-brand-accent);
+  flex-shrink: 0;
+}
+
+.fssai-icon {
+  color: #4CAF50;
+}
+
+.footer-contact-list a {
+  color: inherit;
+}
+
+.footer-contact-list a:hover {
+  color: #FFFFFF;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(220, 206, 193, 0.12);
+  padding: 20px 0;
+  background-color: #1E1510;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8C7B70;
+}
+
+@media (max-width: 868px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

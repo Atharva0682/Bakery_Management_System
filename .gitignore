@@ -1,0 +1,8 @@
+node_modules/
+frontend/dist/
+.env
+.env.*
+!frontend/.env.production
+backend/*.sqlite*
+audit-scan.txt
+frontend/lint-report.txt

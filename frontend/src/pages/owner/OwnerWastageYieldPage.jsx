@@ -1,0 +1,30 @@
+import React, { useEffect, useState } from 'react';
+import api from '../../services/api';
+import { PageHeader, Notice, SectionHeader, EmptyState, money, quantity, dateLabel } from '../../components/owner/OwnerUI';
+import { Leaf, ClipboardList } from 'lucide-react';
+export default function OwnerWastageYieldPage() {
+  const [history, setHistory] = useState([]), [ingredients, setIngredients] = useState([]), [batches, setBatches] = useState([]);
+  const [range, setRange] = useState('this_week'), [error, setError] = useState(''), [saving, setSaving] = useState(false);
+  const [form, setForm] = useState({ type: 'ingredient', id: '', quantity: '', reason: 'Spoiled', notes: '' });
+  const load = async () => { const [w, i, b] = await Promise.all([api.get('/wastage', { params: { range } }), api.get('/ingredients'), api.get('/batches')]); setHistory(w.data); setIngredients(i.data); setBatches(b.data); };
+  useEffect(() => { load().catch(error => setError(error.message)); }, [range]);
+  const groups = new Map();
+  history.forEach(row => { const label = row.raw_material_id ? `Ingredient: ${row.material_name}` : `Finished: ${row.product_name || row.batch_code}`; const key = `${label}:${row.unit}`; const prior = groups.get(key) || { label, unit: row.unit, quantity: 0, cost: 0 }; prior.quantity += Number(row.quantity_wasted); prior.cost += Number(row.cost_loss); groups.set(key, prior); });
+  const options = form.type === 'ingredient' ? ingredients : batches;
+  const submit = async event => {
+    event.preventDefault(); setSaving(true); setError('');
+    const selected = options.find(row => String(row.id) === form.id);
+    try {
+      await api.post('/wastage', { [form.type === 'ingredient' ? 'raw_material_id' : 'batch_id']: Number(form.id), quantity_wasted: Number(form.quantity), unit: form.type === 'ingredient' ? selected.unit : 'pcs', reason: form.reason, notes: form.notes, idempotency_key: crypto.randomUUID() });
+      setForm({ ...form, quantity: '', notes: '' }); await load();
+    } catch (error) { setError(error.message); } finally { setSaving(false); }
+  };
+  const loss = history.reduce((sum, row) => sum + Number(row.cost_loss), 0);
+  return <div className="owner-workspace ow-waste-report">
+    <PageHeader eyebrow="Kitchen efficiency" title="Wastage & yield" description="Keep a clear record of losses, and make the next bake better."><select className="ow-select" aria-label="Wastage period" value={range} onChange={event => setRange(event.target.value)}>{[['today', 'Daily'], ['this_week', 'Weekly'], ['this_month', 'Monthly'], ['quarterly', 'Quarterly'], ['half_yearly', 'Half-yearly'], ['yearly', 'Yearly']].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></PageHeader>
+    <Notice error>{error}</Notice>
+    <div className="ow-waste-summary"><div><Leaf size={35} strokeWidth={1.2} /><span>Recorded cost of wastage<strong>{money(loss)}</strong></span></div><div><ClipboardList size={26} strokeWidth={1.2} /><span>Audit entries<strong>{history.length}</strong></span></div><p>Wastage percentage requires a complete production ledger and is unavailable for historical periods without one.</p></div>
+    <details className="ow-panel ow-waste-form"><summary>Record a loss<small>Deduct wasted ingredients or finished items from stock</small></summary><form className="ow-form" onSubmit={submit}><div className="ow-form-grid"><label className="ow-field">Wastage type<select value={form.type} onChange={event => setForm({ ...form, type: event.target.value, id: '' })}><option value="ingredient">Raw ingredient</option><option value="finished">Finished batch</option></select></label><label className="ow-field">Wasted item<select required value={form.id} onChange={event => setForm({ ...form, id: event.target.value })}><option value="">Select item</option>{options.map(row => <option key={row.id} value={String(row.id)}>{form.type === 'ingredient' ? `${row.name} (${row.unit})` : `${row.batch_no}: ${row.product_name} (${row.actual_usable_qty} usable)`}</option>)}</select></label><label className="ow-field">Wasted quantity<input required type="number" min="0.000001" step="any" value={form.quantity} onChange={event => setForm({ ...form, quantity: event.target.value })} /></label><label className="ow-field">Reason<input required value={form.reason} onChange={event => setForm({ ...form, reason: event.target.value })} /></label></div><label className="ow-field">Notes<textarea value={form.notes} onChange={event => setForm({ ...form, notes: event.target.value })} /></label><div className="ow-actions"><button className="ow-button ow-button-primary" disabled={saving} type="submit">{saving ? 'Recording…' : 'Record loss & deduct stock'}</button></div></form></details>
+    <div className="ow-two-column"><section className="ow-panel"><SectionHeader title="Where the losses occurred" subtitle="Grouped by ingredient or finished product" />{groups.size ? <div className="ow-table-wrap"><table className="ow-table"><thead><tr><th>Item</th><th>Wasted quantity</th><th className="ow-numeric">Cost of loss</th></tr></thead><tbody>{[...groups.values()].map(row => <tr key={row.label + row.unit}><td><strong>{row.label}</strong></td><td>{quantity(row.quantity)} {row.unit}</td><td className="ow-numeric">{money(row.cost)}</td></tr>)}</tbody></table></div> : <EmptyState title="No recorded losses">Wastage recorded during this period will appear here.</EmptyState>}</section><section className="ow-panel"><SectionHeader title="The audit trail" subtitle="Individual entries from the kitchen" /><div className="ow-waste-trail">{history.map(row => <article key={row.id}><span>{dateLabel(row.recorded_at || row.created_at, true)}</span><strong>{row.material_name || row.product_name || row.batch_code}</strong><p>{quantity(row.quantity_wasted)} {row.unit} · {row.reason}</p><b>{money(row.cost_loss)}</b>{row.notes && <p>{row.notes}</p>}</article>)}{!history.length && <EmptyState title="Your ledger is clear" />}</div></section></div>
+  </div>;
+}

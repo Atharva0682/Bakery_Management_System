@@ -1,0 +1,12 @@
+- status: Business service unavailable. Reconnect to load live records and save changes.
+- text: CRUMB & CO. • OWNER PORTAL
+- heading "Executive Management Login" [level=1]
+- paragraph: Executive oversight, batch feasibility, P&L analytics, and operations management.
+- generic: User Email
+- textbox "User Email"
+- generic: Password
+- textbox "Password"
+- button "Enter Operations Command":
+  - generic: Enter Operations Command
+- link "← Return to Customer Storefront":
+  - /url: /

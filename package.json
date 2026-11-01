@@ -1,0 +1,23 @@
+{
+  "name": "crumbco-bakery-management-system",
+  "version": "2.0.0",
+  "description": "Unified Artisanal Bakery Management System, Customer PWA, Staff Floor PWA, and Owner Operations Portal for Crumb & Co., Bandra West, Mumbai",
+  "scripts": {
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "test:integration": "cd backend && node test_e2e_integration.js"
+  },
+  "keywords": [
+    "bakery",
+    "pwa",
+    "postgresql",
+    "jwt",
+    "rbac",
+    "artisanal-bakery",
+    "traceability",
+    "kds"
+  ],
+  "author": "Crumb & Co. Engineering Team",
+  "license": "ISC"
+}
