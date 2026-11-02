@@ -310,6 +310,18 @@ const initializeSqliteDb = () => {
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
       updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
+        -- 17b. Stock Movements
+    CREATE TABLE IF NOT EXISTS stock_movements (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      business_id INTEGER NOT NULL REFERENCES businesses(id),
+      raw_material_id INTEGER REFERENCES raw_materials(id),
+      product_id INTEGER REFERENCES products(id),
+      movement_type TEXT NOT NULL,
+      quantity NUMERIC(10,2) NOT NULL,
+      reference_id INTEGER,
+      notes TEXT,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
 
     -- 18. Order Items
     CREATE TABLE IF NOT EXISTS order_items (
