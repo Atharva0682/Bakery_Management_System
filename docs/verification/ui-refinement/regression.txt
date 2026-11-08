@@ -1,0 +1,27 @@
+PASS password bypass rejected
+PASS unit compatibility and conversion
+PASS existing 25 recipes load with database costing
+PASS recipe tenant write/delete isolation
+PASS recipe edit persists ingredients, zero rates and yield
+PASS create persisted pickup order with tax and cost snapshots
+PASS accept reserves without stock deduction
+PASS production consumes exactly once across retries
+PASS order completion creates finished goods and delivery deducts them exactly once
+PASS historical price and cost survive recipe changes
+PASS stock deduction rejects shortages and invalid quantities
+PASS ingredient wastage atomic deduction and idempotency
+PASS transaction rolls back persisted writes on failure
+PASS all reporting periods use stored records and flag missing historical costs
+PASS concurrent acceptance prevents overselling and rolls back the blocked order
+PASS finished wastage deducts stored batch stock without retry restoration
+PASS HTTP health, authorization and tenant isolation
+PASS HTTP invalid product recipe rolls back product and default variant
+PASS HTTP bulk edit rolls back on a foreign recipe
+PASS HTTP percentage threshold uses fixed reference and handles zero
+PASS HTTP product and recipe CRUD persists a complete formulation
+PASS HTTP delivery config applies once to a multi-item order and preserves totals
+PASS traceability rejects invented references
+PASS cash collection is idempotent and reporting excludes GST from revenue
+PASS owner batch creation saves the selected baker and rejects a foreign worker
+PASS HTTP disallowed CORS origin gets no credential access
+RESULT 26 checks passed; isolated existing-record database: E:\Bakery_Management_System\backend\verification-1793213205179.sqlite

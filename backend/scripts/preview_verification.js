@@ -1,0 +1,23 @@
+const path = require('node:path');
+const Database = require('better-sqlite3');
+(async () => {
+  const source = new Database(path.join(__dirname, '..', 'bakery.pre-audit.sqlite'), { readonly: true });
+  const destination = path.join(__dirname, '..', 'bakery.browser-verification.sqlite');
+  await source.backup(destination); source.close();
+  process.env.SQLITE_DB_PATH = destination;
+  process.env.NODE_ENV = 'test';
+  process.env.DB_CLIENT = 'sqlite';
+  process.env.JWT_SECRET = require('node:crypto').randomBytes(32).toString('hex');
+  const db = require('../src/config/db');
+  const owner = (await db.query("SELECT * FROM users WHERE role = 'owner' AND business_id = 1 LIMIT 1")).rows[0];
+  const hash = await require('../src/utils/security').hashPassword('Verification@2026');
+  await db.query('UPDATE users SET password_hash = $1 WHERE id = $2', [hash, owner.id]);
+  const app = require('../src/server');
+  const express = require('express');
+  const preview = express();
+  const dist = path.join(__dirname, '..', '..', 'frontend', 'dist');
+  preview.use(express.static(dist));
+  preview.use(app);
+  preview.get('*', (req, res) => res.sendFile(path.join(dist, 'index.html')));
+  preview.listen(5501, '127.0.0.1', () => console.log(`Isolated production build: http://127.0.0.1:5501; verification login ${owner.email} / Verification@2026; live database unchanged`));
+})();

@@ -1,0 +1,88 @@
+{
+  "id": "/staff/?source=pwa",
+  "name": "Crumb & Co. — Baker Production Station",
+  "short_name": "Baker Station",
+  "description": "Real-time kitchen tasks, order recipes, baking timers, and wastage logging.",
+  "start_url": "/staff/tasks?source=pwa",
+  "scope": "/staff/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FAF6F0",
+  "theme_color": "#FAF6F0",
+  "categories": ["productivity", "business"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/crumbandco.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Tasks",
+      "short_name": "Tasks",
+      "description": "Floor batches and incoming orders assigned for today",
+      "url": "/staff/tasks",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Baking Station",
+      "short_name": "Baking",
+      "description": "Order recipes, scaling, and oven timers",
+      "url": "/staff/production",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Wastage & Buffer",
+      "short_name": "Wastage",
+      "description": "Log defective scrap and retail buffer surplus",
+      "url": "/staff/batches",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

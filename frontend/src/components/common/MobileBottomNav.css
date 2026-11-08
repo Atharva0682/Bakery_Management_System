@@ -1,0 +1,118 @@
+/* ==============================================================================
+   Crumb & Co. — Mobile PWA Application Bottom Navigation Bar
+   Dedicated touch navigation (>=44px touch targets) with safe-area support.
+   ============================================================================== */
+
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 253, 248, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #E8E0D7;
+  box-shadow: 0 -4px 18px rgba(48, 37, 31, 0.07);
+  padding: 4px 8px calc(4px + env(safe-area-inset-bottom, 0px)) 8px;
+  height: calc(58px + env(safe-area-inset-bottom, 0px));
+  touch-action: manipulation;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.mobile-bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  flex: 1;
+  min-height: 48px;
+  min-width: 44px;
+  text-decoration: none;
+  color: #86766A;
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 4px 2px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  font-family: inherit;
+}
+
+.mobile-bottom-nav-item:active {
+  transform: scale(0.93);
+}
+
+.mobile-bottom-nav-item.active {
+  color: #AD642E;
+  font-weight: 600;
+}
+
+.mobile-bottom-nav-item.active::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  width: 18px;
+  height: 3px;
+  background: #AD642E;
+  border-radius: 9999px;
+}
+
+.mobile-bottom-nav-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-bottom-nav-badge {
+  position: absolute;
+  top: -5px;
+  right: -9px;
+  background-color: #D86D8B;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-shadow: 0 1px 3px rgba(216, 109, 139, 0.4);
+  border: 1.5px solid #FFFDF8;
+  line-height: 1;
+}
+
+.mobile-bottom-nav-label {
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 64px;
+}
+
+/* Helper rule for pages wrapped in mobile layouts to avoid content obscuration */
+@media (max-width: 768px) {
+  .has-mobile-bottom-nav {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 16px)) !important;
+  }
+}
+

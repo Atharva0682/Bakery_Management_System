@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Build outputs
+frontend/dist/
+dist/
+
+# Environment files
+.env
+.env.*
+!frontend/.env.production
+!.env.example
+
+# Temporary test SQLite databases (keep real bakery.sqlite)
+backend/verification-*.sqlite*
+backend/*.browser-verification.sqlite*
+backend/*-shm
+backend/*-wal
+
+# Vercel cache
+.vercel/
+
+# Logs and reports
+*.log
+audit-scan.txt
+frontend/lint-report.txt

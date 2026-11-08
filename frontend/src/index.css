@@ -1,0 +1,473 @@
+/* ==========================================================================
+   Crumb&Co. Bakery Management System — Design Tokens & Core Styles
+   Sourced directly from Figma Visual Design Specifications
+   ========================================================================== */
+
+:root {
+  /* Brand Palette — Figma Visual Design Specs */
+  --color-brand-primary: #D86D8B;      /* Signature Rose Berry CTA & Highlights */
+  --color-brand-primary-hover: #C25B77;
+  --color-brand-primary-active: #AC4C65;
+  --color-brand-primary-light: #FDF2F4;/* Soft pink tint for badges & active states */
+  --color-brand-secondary: #8B5A2B;    /* Warm Baker Terracotta */
+  --color-brand-espresso: #2E221D;     /* Deep Espresso / Coffee Brown */
+  --color-brand-dark: #231815;         /* Rich Dark Footer & Contrast */
+  --color-brand-accent: #D86D8B;       /* Rose Berry Accent */
+  --color-brand-amber: #E27D60;        /* Warm Gold/Amber */
+  
+  /* Background Surfaces */
+  --bg-app: #FAF6F0;                   /* Warm Off-White / Cream Canvas */
+  --bg-canvas: #FAF6F0;
+  --bg-surface: #FFFFFF;               /* Pure White Card */
+  --bg-surface-soft: #F5EFEB;          /* Soft Beige Surface */
+  --bg-surface-tint: #FDF9F5;          /* Warm Parchment */
+  --bg-feature: #F5EDE4;               /* Secondary Feature Band from Figma */
+  --bg-tag: #F4ECE1;                   /* Subtle Chip/Badge Background */
+  
+  /* Typography Colors */
+  --text-primary: #2E221D;             /* Deep Espresso Black for Headers & High Contrast */
+  --text-secondary: #5E4E45;           /* Warm Charcoal for Paragraphs & Descriptions */
+  --text-muted: #8E7C72;               /* Subdued Metadata / Labels */
+  --text-light: #B4A59D;               /* Placeholders */
+  --text-on-primary: #FFFFFF;          /* Pure White on Pink Buttons */
+  
+  /* Borders & Dividers */
+  --border-light: #EFE6DC;             /* Card and Section Dividers */
+  --border-medium: #E8DFD5;            /* Input & Card Outlines */
+  --border-focus: #D86D8B;             /* Focused Input Rings */
+  
+  /* Accents & Status */
+  --color-success: #2E7D32;            /* Fresh / In Stock / On Time */
+  --color-warning: #ED6C02;            /* Low Stock / Pending */
+  --color-error: #D32F2F;              /* Out of Stock / Cancelled */
+  --color-star: #F59E0B;               /* Rating Star Gold */
+  --badge-cart: #EAB308;               /* Yellow Cart Badge in Figma */
+  
+  /* Fonts */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing & Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(46, 34, 29, 0.04);
+  --shadow-md: 0 4px 12px rgba(46, 34, 29, 0.06);
+  --shadow-lg: 0 10px 24px rgba(46, 34, 29, 0.08);
+  --shadow-warm: 0 12px 28px -4px rgba(46, 34, 29, 0.12);
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 72px;
+}
+
+/* Box sizing and clean base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Base Button Styles matching Figma */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: var(--text-on-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-soft);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.btn-pill {
+  border-radius: var(--radius-full);
+}
+
+/* Card Surface Utility */
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Dietary & Status Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-fresh {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.badge-eggless {
+  background-color: #FFF3E0;
+  color: #D84315;
+}
+
+.badge-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #FFFBEB;
+  color: #92400E;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid #FEF3C7;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Dietary Indicators (Indian Food Safety Standards in Figma) */
+.dietary-icon-veg {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #2E7D32;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.dietary-icon-veg::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2E7D32;
+}
+
+.dietary-icon-nonveg {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #8B4513;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.dietary-icon-nonveg::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #8B4513;
+}
+
+/* iOS & Mobile Safari PWA Safe Area insets & touch responsiveness */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* Eliminate 300ms touch delay and optimize tap experience for iPad & iPhone */
+button,
+a,
+input,
+select,
+textarea,
+.btn,
+.product-card {
+  touch-action: manipulation;
+}
+
+/* iOS & iPad Recommended 44x44px Minimum Touch Targets for interactive buttons */
+.btn,
+.mobile-toggle,
+.cart-btn,
+.profile-pill {
+  min-height: 44px;
+}
+
+/* iPad / Tablet Specific Polish (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  /* iPad Touch Comfort */
+  .btn {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
+
+
+
+/* Existing owner portal: keep navigation and working forms usable on phones. */
+.owner-mobile-header { display: none; }
+.owner-sidebar { flex-shrink: 0; }
+.owner-main { min-width: 0; }
+.recipe-workspace > div { min-width: 0; }
+@media (max-width: 1100px) { .recipe-workspace { grid-template-columns: minmax(0, 1fr) !important; } }
+@media (max-width: 900px) {
+  .owner-shell { flex-direction: column; }
+  .owner-mobile-header { display: flex; position: sticky; top: 0; z-index: 60; justify-content: space-between; align-items: center; background: #fbf7f0; color: #3b2b20; padding: 12px 18px; border-bottom: 1px solid #e8e0d7; }
+  .owner-mobile-header strong { font-family: Georgia, serif; font-size: 18px; color: #3b2b20; }
+  .owner-mobile-header button { background: #fffefa; color: #3b2b20; border: 1px solid #e8e0d7; border-radius: 6px; min-height: 40px; min-width: 40px; display: grid; place-items: center; }
+  .owner-sidebar { display: none !important; position: fixed !important; top: 64px !important; left: 0; width: min(280px, 90vw) !important; height: calc(100dvh - 64px) !important; box-shadow: 4px 0 16px rgba(59, 43, 32, 0.12) !important; }
+  .owner-sidebar[data-open="true"] { display: flex !important; }
+  .owner-main { padding: 16px 12px !important; }
+  .owner-main div[style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; }
+  .owner-main input, .owner-main select, .owner-main textarea { max-width: 100%; font-size: 16px; }
+  .owner-main button { min-height: 40px; }
+}
+
+
+/* ==============================================================================
+   Crumb & Co. — Responsive Table-to-Card Layout for PWA Mobile Screens
+   ============================================================================== */
+@media (max-width: 768px) {
+  .ow-table-wrap,
+  div[style*="overflow-x: auto"],
+  div[style*="overflowX: auto"],
+  div[style*="overflowX: 'auto'"] {
+    overflow-x: visible !important;
+    width: 100% !important;
+  }
+
+  .ow-responsive-table {
+    display: block !important;
+    width: 100% !important;
+    border: none !important;
+  }
+
+  .ow-responsive-table thead {
+    display: none !important;
+  }
+
+  .ow-responsive-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  .ow-responsive-table tr {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #FFFDF8 !important;
+    border: 1px solid #E8E0D7 !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    box-shadow: 0 2px 8px rgba(48, 37, 31, 0.04) !important;
+    gap: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ow-responsive-table tr:hover {
+    background: #FFFDF8 !important;
+  }
+
+  .ow-responsive-table td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 7px 0 !important;
+    border: none !important;
+    border-bottom: 1px dashed #EFE7DE !important;
+    white-space: normal !important;
+    text-align: right !important;
+    font-size: 13px !important;
+    min-height: 28px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ow-responsive-table td:last-child {
+    border-bottom: none !important;
+    padding-top: 10px !important;
+    padding-bottom: 0 !important;
+    justify-content: flex-end !important;
+  }
+
+  .ow-responsive-table td::before {
+    content: attr(data-label);
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--ow-muted, #86766A) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    text-align: left !important;
+    margin-right: 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .ow-responsive-table td[data-label=""]::before,
+  .ow-responsive-table td:not([data-label])::before {
+    display: none !important;
+  }
+
+  .ow-responsive-table td .ow-actions,
+  .ow-responsive-table td > div {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .ow-responsive-table td .ow-button {
+    min-height: 38px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .ow-responsive-table td .ow-icon-button {
+    min-height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  .ow-responsive-table .ow-numeric {
+    text-align: right !important;
+  }
+}

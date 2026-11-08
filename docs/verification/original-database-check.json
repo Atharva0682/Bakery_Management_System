@@ -1,0 +1,30 @@
+{
+  "integrity": [
+    {
+      "integrity_check": "ok"
+    }
+  ],
+  "foreign_keys": [],
+  "counts": [
+    {
+      "table": "products",
+      "count": 24
+    },
+    {
+      "table": "recipes",
+      "count": 25
+    },
+    {
+      "table": "orders",
+      "count": 16
+    },
+    {
+      "table": "raw_materials",
+      "count": 30
+    },
+    {
+      "table": "production_batches",
+      "count": 19
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "/?source=pwa",
+  "name": "Crumb & Co. — Artisanal Bakery",
+  "short_name": "Crumb & Co.",
+  "description": "Handcrafted artisanal sourdough, viennoiserie, occasion cakes, and seasonal bakes.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FAF6F0",
+  "theme_color": "#FAF6F0",
+  "categories": ["food", "shopping"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logos/crumbandco.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Menu",
+      "short_name": "Menu",
+      "description": "Browse artisanal sourdough loaves, cakes & pastries",
+      "url": "/menu",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Track Orders",
+      "short_name": "Orders",
+      "description": "Track active bakery orders and estimated pickup time",
+      "url": "/orders",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Baker Floor",
+      "short_name": "Kitchen",
+      "description": "Kitchen display system & production station",
+      "url": "/staff/tasks",
+      "icons": [
+        {
+          "src": "/assets/logos/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
